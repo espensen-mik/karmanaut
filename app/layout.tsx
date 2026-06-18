@@ -11,6 +11,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Karmanaut",
   description: "Karmanaut website",
+  icons: {
+    icon: [
+      { url: "/hjerte_fav_512.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
