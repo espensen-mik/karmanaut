@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
@@ -7,7 +6,7 @@ import { PageHero } from "@/components/hero/page-hero";
 import { ContactCTA } from "@/components/sections/contact-cta";
 import { ContentBlock } from "@/components/sections/content-block";
 import { PhotoPlaceholder } from "@/components/sections/photo-placeholder";
-import { Button } from "@/components/ui/button";
+import { PrimaryButton } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Foredrag",
@@ -37,9 +36,7 @@ export default function ForedragPage() {
         title="Karmanatiske foredrag"
         description="Inspirerende oplæg med varme, energi og perspektiv — skabt til at vække nysgerrighed og give konkrete takeaways."
       >
-        <Button asChild variant="accent" size="lg">
-          <Link href="/kontakt">Book foredrag</Link>
-        </Button>
+        <PrimaryButton href="/kontakt">Book foredrag</PrimaryButton>
       </PageHero>
 
       <ContentBlock title="Om foredragene">

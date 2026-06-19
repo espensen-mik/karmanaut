@@ -1,15 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { Container } from "@/components/layout/container";
 import { FloatingPlanet } from "@/components/illustrations/floating-planet";
 import { OrbitDecoration } from "@/components/illustrations/orbit-decoration";
 import { StarCluster } from "@/components/illustrations/star-cluster";
-import { Button } from "@/components/ui/button";
+import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
 import { siteConfig } from "@/lib/constants/site";
 
 export function ForsideHero() {
@@ -42,15 +40,8 @@ export function ForsideHero() {
               {siteConfig.description}
             </p>
             <div className="mt-10 flex flex-wrap gap-4 lg:mt-14">
-              <Button asChild variant="primary" size="lg">
-                <Link href="/karma">
-                  Karma
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="secondary" size="lg">
-                <Link href="/foredrag">Foredrag</Link>
-              </Button>
+              <PrimaryButton href="/karma">Karma</PrimaryButton>
+              <SecondaryButton href="/foredrag">Foredrag</SecondaryButton>
             </div>
           </motion.div>
 
@@ -71,7 +62,7 @@ export function ForsideHero() {
                 width={520}
                 height={520}
                 priority
-                className="h-auto w-full max-w-md lg:max-w-lg xl:max-w-xl"
+                className="h-auto w-full max-w-lg lg:max-w-xl xl:max-w-2xl"
               />
             </motion.div>
             <StarCluster className="absolute -bottom-4 left-0 w-28 opacity-80 lg:-left-12" />

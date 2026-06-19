@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { PrimaryButton } from "@/components/ui/button";
 
 export function InquiryForm() {
   return (
@@ -24,7 +24,7 @@ export function InquiryForm() {
             name="name"
             type="text"
             placeholder="Dit navn"
-            className="h-12 w-full border-b border-navy/15 bg-transparent px-1 text-navy outline-none transition-colors placeholder:text-navy/30 focus:border-coral"
+            className="h-12 w-full border-b border-navy/15 bg-transparent px-1 text-navy outline-none transition-all duration-200 placeholder:text-navy/30 focus:border-coral"
           />
         </div>
         <div className="space-y-2">
@@ -36,7 +36,7 @@ export function InquiryForm() {
             name="email"
             type="email"
             placeholder="din@email.dk"
-            className="h-12 w-full border-b border-navy/15 bg-transparent px-1 text-navy outline-none transition-colors placeholder:text-navy/30 focus:border-coral"
+            className="h-12 w-full border-b border-navy/15 bg-transparent px-1 text-navy outline-none transition-all duration-200 placeholder:text-navy/30 focus:border-coral"
           />
         </div>
         <div className="space-y-2">
@@ -48,12 +48,12 @@ export function InquiryForm() {
             name="message"
             rows={5}
             placeholder="Fortæl os kort, hvad I er nysgerrige på..."
-            className="w-full border-b border-navy/15 bg-transparent px-1 py-3 text-navy outline-none transition-colors placeholder:text-navy/30 focus:border-coral"
+            className="w-full border-b border-navy/15 bg-transparent px-1 py-3 text-navy outline-none transition-all duration-200 placeholder:text-navy/30 focus:border-coral"
           />
         </div>
-        <Button type="submit" variant="primary" className="mt-4">
+        <PrimaryButton type="submit" className="mt-4">
           Send forespørgsel
-        </Button>
+        </PrimaryButton>
         <p className="text-sm text-navy/50">
           Frontend-formular uden backend endnu. Integration kommer i næste fase.
         </p>

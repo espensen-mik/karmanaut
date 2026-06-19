@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { MobileNav } from "@/components/navigation/mobile-nav";
-import { Button } from "@/components/ui/button";
+import { PrimaryButton } from "@/components/ui/button";
 import { ctaHref, ctaLabel, navItems } from "@/lib/constants/navigation";
 import { siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils/cn";
@@ -23,10 +23,10 @@ export function Header() {
             <Image
               src={siteConfig.logoHorizontal}
               alt={siteConfig.name}
-              width={200}
-              height={44}
+              width={240}
+              height={52}
               priority
-              className="h-9 w-auto lg:h-10"
+              className="h-10 w-auto sm:h-11 lg:h-12"
             />
           </Link>
 
@@ -38,7 +38,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium tracking-wide text-navy/70 transition-colors hover:text-navy"
+                className="text-sm font-medium tracking-wide text-navy/70 transition-all duration-200 hover:text-navy"
               >
                 {item.label}
               </Link>
@@ -46,9 +46,7 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <Button asChild variant="accent" size="sm">
-              <Link href={ctaHref}>{ctaLabel}</Link>
-            </Button>
+            <PrimaryButton href={ctaHref}>{ctaLabel}</PrimaryButton>
           </div>
 
           <button

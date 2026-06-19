@@ -1,11 +1,8 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { OrbitDecoration } from "@/components/illustrations/orbit-decoration";
 import { StarCluster } from "@/components/illustrations/star-cluster";
-import { Button } from "@/components/ui/button";
+import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
 
 export function ContactCTA() {
   return (
@@ -29,20 +26,12 @@ export function ContactCTA() {
           skabe bevægelse og engagement.
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-4">
-          <Button asChild variant="accent" size="lg">
-            <Link href="/kontakt">
-              Kontakt os
-              <ArrowRight className="size-4" />
-            </Link>
-          </Button>
-          <Button
-            asChild
-            variant="secondary"
-            size="lg"
-            className="border-cream/25 text-cream hover:border-cream/50 hover:bg-cream/5"
-          >
-            <Link href="/karma">Udforsk Karma</Link>
-          </Button>
+          <PrimaryButton href="/kontakt" surface="dark">
+            Kontakt os
+          </PrimaryButton>
+          <SecondaryButton href="/karma" surface="dark">
+            Udforsk Karma
+          </SecondaryButton>
         </div>
       </Container>
     </Section>

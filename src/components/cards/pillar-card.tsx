@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 import { HeartMarker } from "@/components/illustrations/heart-marker";
+import { InlineLink } from "@/components/ui/inline-link";
 import { cn } from "@/lib/utils/cn";
 
 type PillarFeatureProps = {
@@ -52,15 +52,14 @@ export function PillarFeature({
           <p className="max-w-xl text-lg leading-[1.75] text-navy/70">
             {description}
           </p>
-          <span
+          <div
             className={cn(
-              "mt-6 inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-coral transition-all group-hover:gap-3",
-              align === "right" && "lg:float-right lg:clear-both",
+              "mt-8",
+              align === "right" && "lg:flex lg:justify-end",
             )}
           >
-            Læs mere
-            <ArrowUpRight className="size-4" />
-          </span>
+            <InlineLink asLabel>Læs mere</InlineLink>
+          </div>
         </div>
       </div>
       <div className="editorial-rule mt-10 lg:mt-12" />

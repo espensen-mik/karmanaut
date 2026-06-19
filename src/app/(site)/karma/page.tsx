@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 import { PageHero } from "@/components/hero/page-hero";
 import { ContactCTA } from "@/components/sections/contact-cta";
@@ -7,7 +6,7 @@ import { ContentBlock } from "@/components/sections/content-block";
 import { PhotoPlaceholder } from "@/components/sections/photo-placeholder";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
-import { Button } from "@/components/ui/button";
+import { PrimaryButton } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Karma",
@@ -62,9 +61,9 @@ export default function KarmaPage() {
           Placeholder: Her kommer senere udvalgte cases, der viser, hvordan Karma
           har skabt bevægelse i forskellige organisationer og kontekster.
         </p>
-        <Button asChild variant="accent" className="mt-4">
-          <Link href="/kontakt">Book en samtale</Link>
-        </Button>
+        <PrimaryButton href="/kontakt" className="mt-4">
+          Book en samtale
+        </PrimaryButton>
       </ContentBlock>
 
       <ContactCTA />
