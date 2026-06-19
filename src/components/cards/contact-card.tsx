@@ -20,7 +20,7 @@ export function ContactCard() {
           <span className="text-lg">{siteConfig.email}</span>
         </a>
         <a
-          href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+          href={`tel:${siteConfig.phoneHref}`}
           className="group flex items-center gap-4 text-navy/75 transition-colors hover:text-navy"
         >
           <span className="flex size-11 items-center justify-center rounded-full bg-coral/10 text-coral transition-colors group-hover:bg-coral/15">

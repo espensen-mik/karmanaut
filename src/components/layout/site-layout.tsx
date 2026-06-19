@@ -1,3 +1,4 @@
+import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/navigation/header";
 
 type SiteLayoutProps = {
@@ -9,6 +10,7 @@ export function SiteLayout({ children }: SiteLayoutProps) {
     <div className="flex min-h-full flex-col bg-cream">
       <Header />
       <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   );
 }

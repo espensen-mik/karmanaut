@@ -22,20 +22,19 @@
   --text-display-xl: clamp(3rem, 6vw, 5.5rem);
   --text-display-lg: clamp(2.25rem, 4vw, 3.75rem);
 
-  --shadow-button-primary: 0 4px 0 #10222c, 0 10px 28px rgb(26 50 63 / 28%),
-    inset 0 1px 0 rgb(255 255 255 / 14%);
-  --shadow-button-primary-hover: 0 6px 0 #10222c, 0 16px 36px rgb(26 50 63 / 34%),
+  --shadow-button-primary: 0 2px 0 #10222c, inset 0 1px 0 rgb(255 255 255 / 14%);
+  --shadow-button-primary-hover: 0 3px 0 #10222c,
     inset 0 1px 0 rgb(255 255 255 / 18%);
-  --shadow-button-primary-active: 0 2px 0 #10222c, 0 4px 12px rgb(26 50 63 / 22%),
+  --shadow-button-primary-active: 0 1px 0 #10222c,
     inset 0 1px 0 rgb(255 255 255 / 8%);
 
-  --shadow-button-primary-dark-surface: 0 4px 0 #e8dcc8, 0 10px 28px rgb(0 0 0 / 18%),
-    inset 0 1px 0 rgb(255 255 255 / 65%);
-  --shadow-button-primary-dark-surface-hover: 0 6px 0 #e8dcc8,
-    0 16px 36px rgb(0 0 0 / 22%), inset 0 1px 0 rgb(255 255 255 / 75%);
-  --shadow-button-primary-dark-surface-active: 0 2px 0 #e8dcc8,
-    0 4px 12px rgb(0 0 0 / 16%), inset 0 1px 0 rgb(255 255 255 / 45%);
+  --shadow-button-accent: 0 2px 0 #d94a4a, inset 0 1px 0 rgb(255 255 255 / 16%);
+  --shadow-button-accent-hover: 0 3px 0 #d94a4a,
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+  --shadow-button-accent-active: 0 1px 0 #d94a4a,
+    inset 0 1px 0 rgb(255 255 255 / 10%);
 
+  --radius-button: 12px;
   --shadow-soft: 0 24px 64px rgb(26 50 63 / 6%);
 }
 

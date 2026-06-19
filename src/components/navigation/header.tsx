@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { MobileNav } from "@/components/navigation/mobile-nav";
-import { PrimaryButton } from "@/components/ui/button";
+import { AccentButton } from "@/components/ui/button";
 import { ctaHref, ctaLabel, navItems } from "@/lib/constants/navigation";
 import { siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils/cn";
@@ -46,7 +46,7 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <PrimaryButton href={ctaHref}>{ctaLabel}</PrimaryButton>
+            <AccentButton href={ctaHref}>{ctaLabel}</AccentButton>
           </div>
 
           <button

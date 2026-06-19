@@ -33,7 +33,7 @@ export function ForsideHero() {
             className="relative z-20 max-w-4xl pt-8 lg:pt-16"
           >
             <p className="eyebrow mb-6">Velkommen til Karmanaut</p>
-            <h1 className="text-display-hero font-display text-navy">
+            <h1 className="font-display text-[clamp(3.5rem,8.5vw,7rem)] leading-[0.92] text-navy">
               Vi kommer med KARMA
             </h1>
             <p className="mt-8 max-w-lg text-lg leading-[1.75] text-navy/70 lg:mt-10 lg:text-xl">

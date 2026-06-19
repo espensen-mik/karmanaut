@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { OrbitDecoration } from "@/components/illustrations/orbit-decoration";
 import { StarCluster } from "@/components/illustrations/star-cluster";
-import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
+import { AccentButton, SecondaryButton } from "@/components/ui/button";
 
 export function ContactCTA() {
   return (
@@ -26,9 +26,7 @@ export function ContactCTA() {
           skabe bevægelse og engagement.
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-4">
-          <PrimaryButton href="/kontakt" surface="dark">
-            Kontakt os
-          </PrimaryButton>
+          <AccentButton href="/kontakt">Kontakt os</AccentButton>
           <SecondaryButton href="/karma" surface="dark">
             Udforsk Karma
           </SecondaryButton>

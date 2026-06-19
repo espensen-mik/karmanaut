@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
-import { PrimaryButton } from "@/components/ui/button";
+import { AccentButton } from "@/components/ui/button";
 import { ctaHref, ctaLabel, navItems } from "@/lib/constants/navigation";
 import { cn } from "@/lib/utils/cn";
 
@@ -37,9 +37,9 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                 {item.label}
               </Link>
             ))}
-            <PrimaryButton href={ctaHref} className="mt-4 w-full">
+            <AccentButton href={ctaHref} className="mt-4 w-full">
               {ctaLabel}
-            </PrimaryButton>
+            </AccentButton>
           </nav>
         </motion.div>
       ) : null}
