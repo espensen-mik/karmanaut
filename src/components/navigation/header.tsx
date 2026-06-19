@@ -3,14 +3,55 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { MobileNav } from "@/components/navigation/mobile-nav";
 import { AccentButton } from "@/components/ui/button";
-import { ctaHref, ctaLabel, navItems } from "@/lib/constants/navigation";
+import { ctaHref, ctaLabel, navItems, type NavItem } from "@/lib/constants/navigation";
 import { siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils/cn";
+
+function DesktopNavItem({ item }: { item: NavItem }) {
+  if (!item.children) {
+    return (
+      <Link
+        href={item.href}
+        className="text-sm font-medium tracking-wide text-navy/70 transition-all duration-200 hover:text-navy"
+      >
+        {item.label}
+      </Link>
+    );
+  }
+
+  return (
+    <div className="group relative">
+      <Link
+        href={item.href}
+        className="inline-flex items-center gap-1 text-sm font-medium tracking-wide text-navy/70 transition-all duration-200 hover:text-navy"
+      >
+        {item.label}
+        <ChevronDown
+          className="size-4 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+          aria-hidden="true"
+        />
+      </Link>
+      <div className="pointer-events-none absolute left-0 top-full z-50 min-w-[15rem] pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+        <div className="rounded-[12px] border border-navy/10 bg-cream py-2 shadow-[var(--shadow-soft)]">
+          {item.children.map((child) => (
+            <Link
+              key={child.href}
+              href={child.href}
+              className="block px-4 py-2.5 text-sm text-navy/75 transition-colors duration-200 hover:bg-cream-dark/40 hover:text-navy"
+            >
+              {child.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -35,13 +76,7 @@ export function Header() {
             aria-label="Primær navigation"
           >
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm font-medium tracking-wide text-navy/70 transition-all duration-200 hover:text-navy"
-              >
-                {item.label}
-              </Link>
+              <DesktopNavItem key={item.href} item={item} />
             ))}
           </nav>
 
