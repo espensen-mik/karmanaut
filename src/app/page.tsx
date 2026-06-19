@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Tagline } from "./tagline";
+
+import { Tagline } from "@/app/tagline";
 
 export default function Home() {
   return (

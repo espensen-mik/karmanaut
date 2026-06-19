@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #faf3e7;
+  --cream-light: #fff9f2;
+  --cream-dark: #f1e7d8;
+
+  --coral: #ea5c5c;
+  --coral-light: #f27a7a;
+  --coral-dark: #d94a4a;
+
+  --navy: #1a323f;
+  --navy-light: #274756;
+  --navy-dark: #10222c;
+
+  /* Legacy aliases for holding page */
+  --background: var(--cream);
+  --foreground: var(--navy);
+  --accent: var(--coral);
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-cream-light: var(--cream-light);
+  --color-cream-dark: var(--cream-dark);
+
+  --color-coral: var(--coral);
+  --color-coral-light: var(--coral-light);
+  --color-coral-dark: var(--coral-dark);
+
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-navy-dark: var(--navy-dark);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-bebas-neue);
+  --font-logo: var(--font-bebas-neue);
+
+  --radius-card: 24px;
+
+  --shadow-soft: 0 8px 32px rgb(26 50 63 / 8%);
+  --shadow-soft-lg: 0 16px 48px rgb(26 50 63 / 10%);
+}
+
+body {
+  background: var(--cream);
+  color: var(--navy);
+  font-family: var(--font-inter), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-bebas-neue), sans-serif;
+  letter-spacing: 0.02em;
+}
