@@ -1,39 +1,38 @@
+import Image from "next/image";
 import Link from "next/link";
 
-import { HeartMarker } from "@/components/illustrations/heart-marker";
 import { InlineLink } from "@/components/ui/inline-link";
 import { cn } from "@/lib/utils/cn";
 
 type PillarFeatureProps = {
-  index: number;
   title: string;
   description: string;
+  icon: string;
   href?: string;
   className?: string;
 };
 
 export function PillarFeature({
-  index,
   title,
   description,
+  icon,
   href,
   className,
 }: PillarFeatureProps) {
   const body = (
-    <div className="grid grid-cols-[2.75rem_1fr] gap-x-5 sm:grid-cols-[3.25rem_1fr] sm:gap-x-8 lg:grid-cols-[3.5rem_1fr] lg:gap-x-10">
-      <span
+    <div className="grid grid-cols-[5.5rem_1fr] gap-x-5 sm:grid-cols-[6.5rem_1fr] sm:gap-x-8">
+      <Image
+        src={icon}
+        alt=""
+        width={96}
+        height={96}
         aria-hidden="true"
-        className="pt-1 font-display text-2xl leading-none text-coral sm:text-3xl"
-      >
-        0{index}
-      </span>
-      <div className="min-w-0">
-        <div className="flex items-center gap-3">
-          {index === 1 ? <HeartMarker size={22} /> : null}
-          <h3 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-none text-navy">
-            {title}
-          </h3>
-        </div>
+        className="size-20 object-contain sm:size-24"
+      />
+      <div className="min-w-0 pt-1">
+        <h3 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-none text-navy">
+          {title}
+        </h3>
         <p className="mt-4 text-base leading-[1.8] text-navy/70 sm:text-lg">
           {description}
         </p>

@@ -19,7 +19,15 @@ export const siteConfig = {
   logoNegative: "/karmanaut_logo_negativ.svg",
   logoNaut: "/Kun_naut.svg",
   heart: "/hjerte.svg",
+  icons: {
+    raadgivning: "/ikoner/raadgivning.png",
+    workshops: "/ikoner/workshops.png",
+    projektudvikling: "/ikoner/projektudvikling.png",
+    kreativeKoncepter: "/ikoner/Kreatekoncepter.png",
+    faellesskab: "/ikoner/faellesskab.png",
+  },
   photos: {
     mikaelCharlotte: "/foto/mik_cha_square.jpg",
+    karmanautMoon: "/foto/karmanaut_moon.png",
   },
 } as const;
