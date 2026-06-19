@@ -9,7 +9,6 @@ type PillarFeatureProps = {
   title: string;
   description: string;
   href?: string;
-  align?: "left" | "right";
   className?: string;
 };
 
@@ -18,73 +17,42 @@ export function PillarFeature({
   title,
   description,
   href,
-  align = "left",
   className,
 }: PillarFeatureProps) {
-  const content = (
-    <>
-      <div
-        className={cn(
-          "flex items-start gap-8 lg:gap-16",
-          align === "right" && "lg:flex-row-reverse",
-        )}
+  const body = (
+    <div className="grid grid-cols-[2.75rem_1fr] gap-x-5 sm:grid-cols-[3.25rem_1fr] sm:gap-x-8">
+      <span
+        aria-hidden="true"
+        className="pt-1 font-display text-2xl leading-none text-coral sm:text-3xl"
       >
-        <span className="font-display text-[clamp(4rem,8vw,7rem)] leading-none text-navy/[0.07]">
-          0{index}
-        </span>
-        <div className={cn("flex-1", align === "right" && "lg:items-end")}>
-          <div
-            className={cn(
-              "mb-4 flex items-center gap-3",
-              align === "right" && "lg:justify-end",
-            )}
-          >
-            {index === 1 ? <HeartMarker size={24} /> : null}
-            <h3 className="font-display text-display-lg text-navy">{title}</h3>
-          </div>
-          <p className="max-w-2xl text-lg leading-[1.75] text-navy/70">
-            {description}
-          </p>
-          {href ? (
-            <div
-              className={cn(
-                "mt-8",
-                align === "right" && "lg:flex lg:justify-end",
-              )}
-            >
-              <InlineLink asLabel>Læs mere</InlineLink>
-            </div>
-          ) : null}
+        0{index}
+      </span>
+      <div className="min-w-0">
+        <div className="flex items-center gap-3">
+          {index === 1 ? <HeartMarker size={22} /> : null}
+          <h3 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-none text-navy">
+            {title}
+          </h3>
         </div>
+        <p className="mt-4 text-base leading-[1.8] text-navy/70 sm:text-lg">
+          {description}
+        </p>
+        {href ? (
+          <div className="mt-6">
+            <InlineLink asLabel>Læs mere</InlineLink>
+          </div>
+        ) : null}
       </div>
-      <div className="editorial-rule mt-10 lg:mt-12" />
-    </>
+    </div>
   );
 
   if (href) {
     return (
-      <Link
-        href={href}
-        className={cn(
-          "group relative block py-10 lg:py-14",
-          align === "right" && "lg:text-right",
-          className,
-        )}
-      >
-        {content}
+      <Link href={href} className={cn("group block", className)}>
+        {body}
       </Link>
     );
   }
 
-  return (
-    <article
-      className={cn(
-        "relative py-10 lg:py-14",
-        align === "right" && "lg:text-right",
-        className,
-      )}
-    >
-      {content}
-    </article>
-  );
+  return <article className={className}>{body}</article>;
 }
