@@ -7,7 +7,7 @@ import { Container } from "@/components/layout/container";
 import { FloatingPlanet } from "@/components/illustrations/floating-planet";
 import { OrbitDecoration } from "@/components/illustrations/orbit-decoration";
 import { StarCluster } from "@/components/illustrations/star-cluster";
-import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
+import { InlineLink } from "@/components/ui/inline-link";
 import { siteConfig } from "@/lib/constants/site";
 
 export function ForsideHero() {
@@ -34,14 +34,15 @@ export function ForsideHero() {
           >
             <p className="eyebrow mb-6">Velkommen til Karmanaut</p>
             <h1 className="font-display text-[clamp(3.5rem,8.5vw,7rem)] leading-[0.92] text-navy">
-              Vi kommer med KARMA
+              Vi kommer med karma
             </h1>
-            <p className="mt-8 max-w-lg text-lg leading-[1.75] text-navy/70 lg:mt-10 lg:text-xl">
-              {siteConfig.description}
+            <p className="mt-8 max-w-xl text-lg leading-[1.8] text-navy/70 lg:mt-10 lg:text-xl">
+              {siteConfig.heroDescription}
             </p>
-            <div className="mt-10 flex flex-wrap gap-4 lg:mt-14">
-              <PrimaryButton href="/karma">Karma</PrimaryButton>
-              <SecondaryButton href="/foredrag">Foredrag</SecondaryButton>
+            <div className="mt-10 lg:mt-12">
+              <InlineLink href="/karma">
+                Læs mere om, hvordan vi skaber karma
+              </InlineLink>
             </div>
           </motion.div>
 
