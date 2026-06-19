@@ -50,8 +50,16 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy text-cream">
       <StarCluster className="pointer-events-none absolute right-[6%] top-12 w-28 text-coral-light/40" />
+      <Image
+        src={siteConfig.karmanautOutline}
+        alt=""
+        width={540}
+        height={540}
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-16 -right-12 w-56 select-none sm:w-64 lg:-bottom-24 lg:-right-4 lg:w-80 xl:w-96"
+      />
 
-      <Container className="relative py-16 lg:py-20">
+      <Container className="relative z-10 py-16 lg:py-20">
         <div className="grid gap-14 lg:grid-cols-[1.15fr_0.55fr_0.9fr] lg:gap-16">
           <div>
             <Link href="/forside" className="inline-block">

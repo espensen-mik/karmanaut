@@ -17,6 +17,7 @@ export const siteConfig = {
   footerTagline: "Lad os snakke sammen... Det bliver karmanautisk!",
   logoHorizontal: "/Karmanaut_ID_horisontal.svg",
   logoNaut: "/Kun_naut.svg",
+  karmanautOutline: "/karmanaut_outline.svg",
   heart: "/hjerte.svg",
   photos: {
     mikaelCharlotte: "/foto/mik_cha_square.jpg",
