@@ -40,12 +40,19 @@ export default function KarmaPage() {
         </p>
       </ContentBlock>
 
-      <Section className="bg-cream">
+      <Section className="overflow-hidden bg-cream">
         <Container>
-          <h2 className="font-display text-4xl text-navy">Eksempler</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <PhotoPlaceholder label="Future Photography — movement & creativity" />
-            <PhotoPlaceholder label="Future Photography — communities" />
+          <h2 className="text-display-lg font-display text-navy">Eksempler</h2>
+          <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
+            <PhotoPlaceholder
+              variant="editorial-wide"
+              label="Future Photography — movement & creativity"
+            />
+            <PhotoPlaceholder
+              variant="editorial"
+              label="Future Photography — communities"
+              className="lg:mt-16"
+            />
           </div>
         </Container>
       </Section>

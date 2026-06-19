@@ -7,15 +7,17 @@ type PlanetBadgeProps = {
 
 export function PlanetBadge({ className, label = "Karma" }: PlanetBadgeProps) {
   return (
-    <div
+    <span
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-cream-dark bg-cream-light px-4 py-2 text-xs font-semibold uppercase tracking-wider text-navy/70 shadow-[var(--shadow-soft)]",
+        "inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-navy/55",
         className,
       )}
-      aria-hidden="true"
     >
-      <span className="size-2 rounded-full bg-coral" />
+      <span className="relative flex size-3 items-center justify-center">
+        <span className="absolute size-3 rounded-full border border-navy/20" />
+        <span className="size-1.5 rounded-full bg-coral" />
+      </span>
       {label}
-    </div>
+    </span>
   );
 }

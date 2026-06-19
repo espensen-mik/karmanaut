@@ -17,6 +17,14 @@
   --background: var(--cream);
   --foreground: var(--navy);
   --accent: var(--coral);
+
+  --text-display-hero: clamp(4rem, 10vw, 8rem);
+  --text-display-xl: clamp(3rem, 6vw, 5.5rem);
+  --text-display-lg: clamp(2.25rem, 4vw, 3.75rem);
+
+  --shadow-button: 0 4px 0 rgb(16 34 44 / 100%), 0 8px 24px rgb(26 50 63 / 18%);
+  --shadow-button-hover: 0 6px 0 rgb(16 34 44 / 100%), 0 14px 32px rgb(26 50 63 / 22%);
+  --shadow-soft: 0 24px 64px rgb(26 50 63 / 6%);
 }
 
 @theme inline {
@@ -39,11 +47,6 @@
   --font-sans: var(--font-inter);
   --font-display: var(--font-bebas-neue);
   --font-logo: var(--font-bebas-neue);
-
-  --radius-card: 24px;
-
-  --shadow-soft: 0 8px 32px rgb(26 50 63 / 8%);
-  --shadow-soft-lg: 0 16px 48px rgb(26 50 63 / 10%);
 }
 
 body {
@@ -57,5 +60,40 @@ h2,
 h3,
 h4 {
   font-family: var(--font-bebas-neue), sans-serif;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+.text-display-hero {
+  font-size: var(--text-display-hero);
+  line-height: 0.92;
+}
+
+.text-display-xl {
+  font-size: var(--text-display-xl);
+  line-height: 0.95;
+}
+
+.text-display-lg {
+  font-size: var(--text-display-lg);
+  line-height: 0.98;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+.editorial-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(26 50 63 / 12%) 20%,
+    rgb(26 50 63 / 12%) 80%,
+    transparent
+  );
 }

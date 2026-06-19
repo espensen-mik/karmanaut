@@ -20,14 +20,14 @@ export function Section({
   id,
 }: SectionProps) {
   const spacingClass = {
-    default: "py-20 lg:py-28",
-    compact: "py-14 lg:py-20",
-    hero: "py-24 lg:py-32",
+    default: "py-28 lg:py-40",
+    compact: "py-20 lg:py-28",
+    hero: "py-32 lg:py-44",
   }[spacing];
 
   if (!animate) {
     return (
-      <section id={id} className={cn(spacingClass, className)}>
+      <section id={id} className={cn("relative", spacingClass, className)}>
         {children}
       </section>
     );
@@ -36,11 +36,11 @@ export function Section({
   return (
     <motion.section
       id={id}
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className={cn(spacingClass, className)}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={cn("relative", spacingClass, className)}
     >
       {children}
     </motion.section>

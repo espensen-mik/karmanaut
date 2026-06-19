@@ -21,9 +21,11 @@ export default function KontaktPage() {
       />
 
       <Section spacing="compact" className="bg-cream">
-        <Container className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
+        <Container className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
           <ContactCard />
-          <InquiryForm />
+          <div className="lg:border-l lg:border-navy/10 lg:pl-16">
+            <InquiryForm />
+          </div>
         </Container>
       </Section>
     </>

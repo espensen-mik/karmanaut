@@ -18,25 +18,22 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative overflow-hidden border-b border-cream-dark/60 bg-cream-light py-20 lg:py-28",
+        "relative overflow-hidden bg-cream py-24 lg:py-36",
         className,
       )}
     >
+      <div className="pointer-events-none absolute -right-20 top-16 size-64 rounded-full bg-coral/[0.04] blur-3xl" />
       <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-8">
-        {eyebrow ? (
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-coral">
-            {eyebrow}
-          </p>
-        ) : null}
-        <h1 className="max-w-3xl font-display text-5xl leading-none text-navy sm:text-6xl">
+        {eyebrow ? <p className="eyebrow mb-6">{eyebrow}</p> : null}
+        <h1 className="max-w-4xl text-display-xl font-display text-navy">
           {title}
         </h1>
         {description ? (
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy/75">
+          <p className="mt-8 max-w-2xl text-lg leading-[1.75] text-navy/70 lg:text-xl">
             {description}
           </p>
         ) : null}
-        {children ? <div className="mt-8">{children}</div> : null}
+        {children ? <div className="mt-10">{children}</div> : null}
       </div>
     </section>
   );
