@@ -39,9 +39,11 @@ export default function RootLayout({
   return (
     <html
       lang="da"
-      className={`${inter.variable} ${bebasNeue.variable} h-full antialiased`}
+      className={`${inter.variable} ${bebasNeue.variable} h-full overflow-x-hidden antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col overflow-x-hidden font-sans">
+        {children}
+      </body>
     </html>
   );
 }
