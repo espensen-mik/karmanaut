@@ -31,25 +31,19 @@ export function PillarsSection() {
   return (
     <Section className="overflow-hidden bg-cream-light">
       <FloatingPlanet className="absolute right-[6%] top-24 hidden opacity-60 lg:block" />
-      <Container className="relative">
-        <div className="lg:grid lg:grid-cols-[minmax(0,17rem)_1fr] lg:gap-16 xl:grid-cols-[minmax(0,20rem)_1fr] xl:gap-24">
-          <div className="lg:sticky lg:top-32 lg:self-start">
-            <PlanetBadge label="Karma" />
-            <h2 className="mt-5 text-display-xl font-display text-navy">
-              Karma er…
-            </h2>
-          </div>
+      <Container className="relative max-w-3xl">
+        <PlanetBadge label="Karma" />
+        <h2 className="mt-5 text-display-xl font-display text-navy">Karma er…</h2>
 
-          <div className="mt-12 divide-y divide-navy/10 lg:mt-0">
-            {pillars.map((pillar, index) => (
-              <PillarFeature
-                key={pillar.title}
-                index={index + 1}
-                className="py-10 first:pt-0 last:pb-0 lg:py-12"
-                {...pillar}
-              />
-            ))}
-          </div>
+        <div className="mt-12 divide-y divide-navy/10">
+          {pillars.map((pillar, index) => (
+            <PillarFeature
+              key={pillar.title}
+              index={index + 1}
+              className="py-10 first:pt-0 last:pb-0"
+              {...pillar}
+            />
+          ))}
         </div>
       </Container>
     </Section>

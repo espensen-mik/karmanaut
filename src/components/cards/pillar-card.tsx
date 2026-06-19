@@ -20,7 +20,7 @@ export function PillarFeature({
   className,
 }: PillarFeatureProps) {
   const body = (
-    <div className="grid grid-cols-[2.75rem_1fr] gap-x-5 sm:grid-cols-[3.25rem_1fr] sm:gap-x-8">
+    <div className="grid grid-cols-[2.75rem_1fr] gap-x-5 sm:grid-cols-[3.25rem_1fr] sm:gap-x-8 lg:grid-cols-[3.5rem_1fr] lg:gap-x-10">
       <span
         aria-hidden="true"
         className="pt-1 font-display text-2xl leading-none text-coral sm:text-3xl"
