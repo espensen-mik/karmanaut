@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/constants/site";
 
 export function ForsideHero() {
   return (
-    <section className="relative min-h-[88vh] overflow-hidden pt-12 pb-20 lg:min-h-[92vh] lg:pt-16 lg:pb-28">
+    <section className="relative overflow-hidden pt-12 pb-16 lg:min-h-0 lg:pb-20 lg:pt-16">
       <OrbitDecoration
         animate
         className="absolute -left-24 top-32 size-[28rem] opacity-60 lg:-left-16 lg:top-20 lg:size-[36rem]"
@@ -40,7 +40,10 @@ export function ForsideHero() {
               {siteConfig.heroDescription}
             </p>
             <div className="mt-10 lg:mt-12">
-              <InlineLink href="/karma">
+              <InlineLink
+                href="/karma"
+                className="text-coral hover:text-coral-dark"
+              >
                 Læs mere om, hvordan vi skaber karma
               </InlineLink>
             </div>

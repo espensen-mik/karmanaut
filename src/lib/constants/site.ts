@@ -19,6 +19,6 @@ export const siteConfig = {
   logoNaut: "/Kun_naut.svg",
   heart: "/hjerte.svg",
   photos: {
-    mikaelCharlotte: "/foto/mik_cha.jpeg",
+    mikaelCharlotte: "/foto/mik_cha_square.jpg",
   },
 } as const;

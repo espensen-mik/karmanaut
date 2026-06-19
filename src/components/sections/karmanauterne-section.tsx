@@ -2,37 +2,54 @@ import Image from "next/image";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
+import { PlanetBadge } from "@/components/illustrations/planet-badge";
 import { HeartMarker } from "@/components/illustrations/heart-marker";
-import { InlineLink } from "@/components/ui/inline-link";
+import { PrimaryButton } from "@/components/ui/button";
 import { siteConfig } from "@/lib/constants/site";
 
 export function KarmanauterneSection() {
   return (
-    <Section className="overflow-hidden bg-cream-light">
-      <Container className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-24">
-        <div className="relative lg:-ml-4">
-          <HeartMarker className="absolute -right-4 -top-4 z-10 lg:-right-8" size={40} />
-          <div className="relative aspect-[4/5] overflow-hidden bg-cream-dark/30 lg:aspect-[3/4]">
-            <Image
-              src={siteConfig.photos.mikaelCharlotte}
-              alt="Mikael og Charlotte Espensen, Karmanaut"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 1024px) 100vw, 520px"
-            />
-          </div>
-        </div>
+    <Section
+      animate
+      spacing="compact"
+      className="relative -mt-6 bg-white pt-4 lg:-mt-12 lg:pt-8"
+    >
+      <Container>
+        <PlanetBadge label="Karmanauterne" />
 
-        <div className="max-w-xl lg:py-8">
-          <h2 className="text-display-lg font-display text-navy lg:text-display-xl">
-            Vi er karmanauterne
-          </h2>
-          <p className="mt-8 text-lg leading-[1.8] text-navy/70 lg:text-xl">
-            {siteConfig.karmanauterneDescription}
-          </p>
-          <div className="mt-10">
-            <InlineLink href="/om-os">Læs mere om os</InlineLink>
+        <div className="mt-5 grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h2 className="text-display-lg font-display text-navy lg:text-display-xl">
+              Vi er karmanauterne
+            </h2>
+            <p className="mt-8 text-lg leading-[1.85] text-navy/70 lg:text-xl">
+              {siteConfig.karmanauterneDescription}
+            </p>
+            <div className="mt-10">
+              <PrimaryButton href="/om-os">Læs mere om os</PrimaryButton>
+            </div>
           </div>
+
+          <figure className="mx-auto w-full max-w-xs lg:mx-0 lg:ml-auto lg:max-w-sm">
+            <div className="relative">
+              <HeartMarker
+                className="absolute -bottom-8 -right-8 z-10 lg:-bottom-10 lg:-right-10"
+                size={146}
+              />
+              <Image
+                src={siteConfig.photos.mikaelCharlotte}
+                alt="Mikael og Charlotte Espensen, Karmanaut"
+                width={480}
+                height={480}
+                className="h-auto w-full object-cover"
+                sizes="(max-width: 1024px) 80vw, 384px"
+              />
+            </div>
+            <figcaption className="mt-4 text-sm leading-relaxed text-navy/55">
+              Karmanaut er startet af Mikael & Charlotte Espensen med erfaring
+              fra reklamebranchen og udviklingen af LykkeLiga.
+            </figcaption>
+          </figure>
         </div>
       </Container>
     </Section>
