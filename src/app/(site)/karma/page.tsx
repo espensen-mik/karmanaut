@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { PageHero } from "@/components/hero/page-hero";
-import { ContactCTA } from "@/components/sections/contact-cta";
 import { ContentBlock } from "@/components/sections/content-block";
 import { PhotoPlaceholder } from "@/components/sections/photo-placeholder";
 import { Container } from "@/components/layout/container";
@@ -65,8 +64,6 @@ export default function KarmaPage() {
           Book en samtale
         </PrimaryButton>
       </ContentBlock>
-
-      <ContactCTA />
     </>
   );
 }

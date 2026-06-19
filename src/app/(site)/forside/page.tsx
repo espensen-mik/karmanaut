@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import { ContactCTA } from "@/components/sections/contact-cta";
 import { ForsideHero } from "@/components/hero/forside-hero";
 import { KarmanauterneSection } from "@/components/sections/karmanauterne-section";
 import { PillarsSection } from "@/components/sections/pillars-section";
@@ -19,7 +18,6 @@ export default function ForsidePage() {
       <KarmanauterneSection />
       <PillarsSection />
       <WhySection />
-      <ContactCTA />
     </>
   );
 }

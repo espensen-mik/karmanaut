@@ -8,7 +8,7 @@ type PillarFeatureProps = {
   index: number;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   align?: "left" | "right";
   className?: string;
 };
@@ -21,15 +21,8 @@ export function PillarFeature({
   align = "left",
   className,
 }: PillarFeatureProps) {
-  return (
-    <Link
-      href={href}
-      className={cn(
-        "group relative block py-10 lg:py-14",
-        align === "right" && "lg:text-right",
-        className,
-      )}
-    >
+  const content = (
+    <>
       <div
         className={cn(
           "flex items-start gap-8 lg:gap-16",
@@ -49,20 +42,49 @@ export function PillarFeature({
             {index === 1 ? <HeartMarker size={24} /> : null}
             <h3 className="font-display text-display-lg text-navy">{title}</h3>
           </div>
-          <p className="max-w-xl text-lg leading-[1.75] text-navy/70">
+          <p className="max-w-2xl text-lg leading-[1.75] text-navy/70">
             {description}
           </p>
-          <div
-            className={cn(
-              "mt-8",
-              align === "right" && "lg:flex lg:justify-end",
-            )}
-          >
-            <InlineLink asLabel>Læs mere</InlineLink>
-          </div>
+          {href ? (
+            <div
+              className={cn(
+                "mt-8",
+                align === "right" && "lg:flex lg:justify-end",
+              )}
+            >
+              <InlineLink asLabel>Læs mere</InlineLink>
+            </div>
+          ) : null}
         </div>
       </div>
       <div className="editorial-rule mt-10 lg:mt-12" />
-    </Link>
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={cn(
+          "group relative block py-10 lg:py-14",
+          align === "right" && "lg:text-right",
+          className,
+        )}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <article
+      className={cn(
+        "relative py-10 lg:py-14",
+        align === "right" && "lg:text-right",
+        className,
+      )}
+    >
+      {content}
+    </article>
   );
 }

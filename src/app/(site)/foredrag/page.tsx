@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { PageHero } from "@/components/hero/page-hero";
-import { ContactCTA } from "@/components/sections/contact-cta";
 import { ContentBlock } from "@/components/sections/content-block";
 import { PhotoPlaceholder } from "@/components/sections/photo-placeholder";
 import { PrimaryButton } from "@/components/ui/button";
@@ -90,8 +89,6 @@ export default function ForedragPage() {
           </div>
         </Container>
       </Section>
-
-      <ContactCTA />
     </>
   );
 }

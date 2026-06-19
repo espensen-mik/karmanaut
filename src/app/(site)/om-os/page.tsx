@@ -7,7 +7,6 @@ import { HeartMarker } from "@/components/illustrations/heart-marker";
 import { OrbitDecoration } from "@/components/illustrations/orbit-decoration";
 import { StarCluster } from "@/components/illustrations/star-cluster";
 import { PageHero } from "@/components/hero/page-hero";
-import { ContactCTA } from "@/components/sections/contact-cta";
 import { ContentBlock } from "@/components/sections/content-block";
 import { PhotoPlaceholder } from "@/components/sections/photo-placeholder";
 import { siteConfig } from "@/lib/constants/site";
@@ -132,8 +131,6 @@ export default function OmOsPage() {
           </div>
         </Container>
       </Section>
-
-      <ContactCTA />
     </>
   );
 }
