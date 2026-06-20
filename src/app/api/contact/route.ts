@@ -8,6 +8,7 @@ type ContactPayload = {
   organization?: string;
   email?: string;
   message?: string;
+  website?: string;
 };
 
 function isValidEmail(email: string) {
@@ -42,6 +43,11 @@ export async function POST(request: Request) {
   const organization = body.organization?.trim() ?? "";
   const email = body.email?.trim() ?? "";
   const message = body.message?.trim() ?? "";
+  const website = body.website?.trim() ?? "";
+
+  if (website) {
+    return NextResponse.json({ success: true });
+  }
 
   if (!name) {
     return NextResponse.json({ error: "Navn er påkrævet." }, { status: 400 });

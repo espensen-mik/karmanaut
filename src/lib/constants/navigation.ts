@@ -26,4 +26,4 @@ export const navItems: readonly NavItem[] = [
 ];
 
 export const ctaHref = "/kontakt";
-export const ctaLabel = "Bliv Karmanaut";
+export const ctaLabel = "Tryk for Karma";

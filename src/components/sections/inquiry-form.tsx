@@ -28,6 +28,7 @@ export function InquiryForm() {
           organization: formData.get("organization"),
           email: formData.get("email"),
           message: formData.get("message"),
+          website: formData.get("website"),
         }),
       });
 
@@ -55,7 +56,21 @@ export function InquiryForm() {
       <h2 className="mb-8 font-display text-display-lg text-navy">
         Send en forespørgsel
       </h2>
-      <form className="space-y-6" onSubmit={handleSubmit}>
+      <form className="relative space-y-6" onSubmit={handleSubmit}>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-[-9999px] h-0 w-0 overflow-hidden opacity-0"
+        >
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            name="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            defaultValue=""
+          />
+        </div>
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium text-navy/80">
             Navn
