@@ -20,7 +20,11 @@ export default function KontaktPage() {
         description="Uanset om du er nysgerrig på Karma, foredrag eller noget helt tredje — vi er klar til en uforpligtende samtale."
       />
 
-      <Section spacing="compact" className="bg-cream">
+      <Section
+        animate={false}
+        spacing="compact"
+        className="bg-cream pt-4 pb-16 lg:pt-6 lg:pb-20"
+      >
         <Container className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
           <ContactCard />
           <div className="lg:border-l lg:border-navy/10 lg:pl-16">
