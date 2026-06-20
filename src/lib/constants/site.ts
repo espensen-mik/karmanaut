@@ -29,5 +29,6 @@ export const siteConfig = {
   photos: {
     mikaelCharlotte: "/foto/mik_cha_square.jpg",
     karmanautMoon: "/foto/karmanaut_moon.png",
+    karmanautKontakt: "/karmanaut_kontakt.png",
   },
 } as const;

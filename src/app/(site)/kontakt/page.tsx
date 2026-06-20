@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { ContactCard } from "@/components/cards/contact-card";
-import { PageHero } from "@/components/hero/page-hero";
+import { KontaktHero } from "@/components/hero/kontakt-hero";
 import { InquiryForm } from "@/components/sections/inquiry-form";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <>
-      <PageHero
+      <KontaktHero
         eyebrow="Kontakt"
         title="Lad os tage en snak"
         description="Uanset om du er nysgerrig på Karma, foredrag eller noget helt tredje — vi er klar til en uforpligtende samtale."
