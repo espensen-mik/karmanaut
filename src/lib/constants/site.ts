@@ -30,5 +30,6 @@ export const siteConfig = {
     mikaelCharlotte: "/foto/mik_cha_square.jpg",
     karmanautMoon: "/foto/karmanaut_moon.png",
     karmanautKontakt: "/karmanaut_kontakt2.png",
+    karmaVerden: "/karma_verden.png",
   },
 } as const;

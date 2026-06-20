@@ -4,7 +4,8 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { AccentButton } from "@/components/ui/button";
-import { ctaHref, ctaLabel, navItems } from "@/lib/constants/navigation";
+import { useKarmaModal } from "@/components/karma/karma-modal-provider";
+import { ctaLabel, navItems } from "@/lib/constants/navigation";
 import { cn } from "@/lib/utils/cn";
 
 type MobileNavProps = {
@@ -13,6 +14,8 @@ type MobileNavProps = {
 };
 
 export function MobileNav({ open, onClose }: MobileNavProps) {
+  const { openModal } = useKarmaModal();
+
   return (
     <AnimatePresence>
       {open ? (
@@ -61,7 +64,14 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                 </Link>
               ),
             )}
-            <AccentButton href={ctaHref} className="mt-4 w-full">
+            <AccentButton
+              type="button"
+              className="mt-4 w-full"
+              onClick={() => {
+                onClose();
+                openModal();
+              }}
+            >
               {ctaLabel}
             </AccentButton>
           </nav>

@@ -9,6 +9,7 @@ type ContactPayload = {
   email?: string;
   message?: string;
   website?: string;
+  source?: string;
 };
 
 function isValidEmail(email: string) {
@@ -44,6 +45,7 @@ export async function POST(request: Request) {
   const email = body.email?.trim() ?? "";
   const message = body.message?.trim() ?? "";
   const website = body.website?.trim() ?? "";
+  const source = body.source?.trim() ?? "kontakt";
 
   if (website) {
     return NextResponse.json({ success: true });
@@ -73,8 +75,9 @@ export async function POST(request: Request) {
     from: fromEmail,
     to: [toEmail],
     replyTo: email,
-    subject: `Ny forespørgsel fra ${name}${organization ? ` (${organization})` : ""}`,
+    subject: `[${source}] Ny forespørgsel fra ${name}${organization ? ` (${organization})` : ""}`,
     text: [
+      `Kilde: ${source}`,
       `Navn: ${name}`,
       organization ? `Kommer fra: ${organization}` : null,
       `E-mail: ${email}`,
@@ -85,6 +88,7 @@ export async function POST(request: Request) {
       .filter(Boolean)
       .join("\n"),
     html: `
+      <p><strong>Kilde:</strong> ${escapeHtml(source)}</p>
       <p><strong>Navn:</strong> ${escapeHtml(name)}</p>
       ${organization ? `<p><strong>Kommer fra:</strong> ${escapeHtml(organization)}</p>` : ""}
       <p><strong>E-mail:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>

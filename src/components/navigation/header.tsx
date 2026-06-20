@@ -7,8 +7,9 @@ import { ChevronDown, Menu, X } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { MobileNav } from "@/components/navigation/mobile-nav";
+import { useKarmaModal } from "@/components/karma/karma-modal-provider";
 import { AccentButton } from "@/components/ui/button";
-import { ctaHref, ctaLabel, navItems, type NavItem } from "@/lib/constants/navigation";
+import { ctaLabel, navItems, type NavItem } from "@/lib/constants/navigation";
 import { siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils/cn";
 
@@ -98,6 +99,7 @@ function DesktopNavItem({ item }: { item: NavItem }) {
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { openModal } = useKarmaModal();
 
   return (
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur-lg">
@@ -124,7 +126,9 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:block">
-            <AccentButton href={ctaHref}>{ctaLabel}</AccentButton>
+            <AccentButton type="button" onClick={openModal}>
+              {ctaLabel}
+            </AccentButton>
           </div>
 
           <button
