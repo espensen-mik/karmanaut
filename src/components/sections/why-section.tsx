@@ -5,6 +5,7 @@ import { Section } from "@/components/layout/section";
 import { FloatingPlanet } from "@/components/illustrations/floating-planet";
 import { PlanetBadge } from "@/components/illustrations/planet-badge";
 import { StarCluster } from "@/components/illustrations/star-cluster";
+import { InlineLink } from "@/components/ui/inline-link";
 import { siteConfig } from "@/lib/constants/site";
 
 export function WhySection() {
@@ -34,6 +35,14 @@ export function WhySection() {
             og transformative processer. I stedet får du klar tale og hjælp, som
             kan mærkes.
           </p>
+          <div className="mt-8">
+            <InlineLink
+              href="/om-os"
+              className="text-coral hover:text-coral-dark"
+            >
+              Læs mere
+            </InlineLink>
+          </div>
         </div>
       </Container>
     </Section>

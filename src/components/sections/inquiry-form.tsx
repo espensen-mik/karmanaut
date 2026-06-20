@@ -25,6 +25,7 @@ export function InquiryForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: formData.get("name"),
+          organization: formData.get("organization"),
           email: formData.get("email"),
           message: formData.get("message"),
         }),
@@ -66,6 +67,22 @@ export function InquiryForm() {
             required
             disabled={status === "loading"}
             placeholder="Dit navn"
+            className="h-12 w-full border-b border-navy/15 bg-transparent px-1 text-navy outline-none transition-all duration-200 placeholder:text-navy/30 focus:border-coral disabled:opacity-60"
+          />
+        </div>
+        <div className="space-y-2">
+          <label
+            htmlFor="organization"
+            className="text-sm font-medium text-navy/80"
+          >
+            Jeg kommer fra (firma, organisation…)
+          </label>
+          <input
+            id="organization"
+            name="organization"
+            type="text"
+            disabled={status === "loading"}
+            placeholder="Fx LykkeLiga, Aalborg Kommune…"
             className="h-12 w-full border-b border-navy/15 bg-transparent px-1 text-navy outline-none transition-all duration-200 placeholder:text-navy/30 focus:border-coral disabled:opacity-60"
           />
         </div>

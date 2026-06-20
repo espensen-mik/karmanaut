@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/constants/site";
 
 type ContactPayload = {
   name?: string;
+  organization?: string;
   email?: string;
   message?: string;
 };
@@ -38,6 +39,7 @@ export async function POST(request: Request) {
   }
 
   const name = body.name?.trim() ?? "";
+  const organization = body.organization?.trim() ?? "";
   const email = body.email?.trim() ?? "";
   const message = body.message?.trim() ?? "";
 
@@ -65,16 +67,20 @@ export async function POST(request: Request) {
     from: fromEmail,
     to: [toEmail],
     replyTo: email,
-    subject: `Ny forespørgsel fra ${name}`,
+    subject: `Ny forespørgsel fra ${name}${organization ? ` (${organization})` : ""}`,
     text: [
       `Navn: ${name}`,
+      organization ? `Kommer fra: ${organization}` : null,
       `E-mail: ${email}`,
       "",
       "Besked:",
       message,
-    ].join("\n"),
+    ]
+      .filter(Boolean)
+      .join("\n"),
     html: `
       <p><strong>Navn:</strong> ${escapeHtml(name)}</p>
+      ${organization ? `<p><strong>Kommer fra:</strong> ${escapeHtml(organization)}</p>` : ""}
       <p><strong>E-mail:</strong> <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></p>
       <p><strong>Besked:</strong></p>
       <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>

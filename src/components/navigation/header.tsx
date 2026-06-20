@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -13,6 +13,22 @@ import { siteConfig } from "@/lib/constants/site";
 import { cn } from "@/lib/utils/cn";
 
 function DesktopNavItem({ item }: { item: NavItem }) {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function handlePointerDown(event: PointerEvent) {
+      if (!containerRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, [open]);
+
   if (!item.children) {
     return (
       <Link
@@ -25,23 +41,50 @@ function DesktopNavItem({ item }: { item: NavItem }) {
   }
 
   return (
-    <div className="group relative">
-      <Link
-        href={item.href}
-        className="inline-flex items-center gap-1 text-sm font-medium tracking-wide text-navy/70 transition-all duration-200 hover:text-navy"
+    <div
+      ref={containerRef}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <div className="inline-flex items-center">
+        <Link
+          href={item.href}
+          className="text-sm font-medium tracking-wide text-navy/70 transition-all duration-200 hover:text-navy"
+        >
+          {item.label}
+        </Link>
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-haspopup="true"
+          aria-label={`Åbn ${item.label} menu`}
+          onClick={() => setOpen((value) => !value)}
+          className="inline-flex size-9 items-center justify-center rounded-[8px] text-navy/70 transition-colors duration-200 hover:bg-navy/5 hover:text-navy"
+        >
+          <ChevronDown
+            className={cn(
+              "size-4 transition-transform duration-200",
+              open && "rotate-180",
+            )}
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+      <div
+        className={cn(
+          "absolute left-0 top-full z-50 min-w-[15rem] pt-3 transition-all duration-200",
+          open
+            ? "pointer-events-auto visible opacity-100"
+            : "pointer-events-none invisible opacity-0",
+        )}
       >
-        {item.label}
-        <ChevronDown
-          className="size-4 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
-          aria-hidden="true"
-        />
-      </Link>
-      <div className="pointer-events-none absolute left-0 top-full z-50 min-w-[15rem] pt-3 opacity-0 transition-all duration-200 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
         <div className="rounded-[12px] border border-navy/10 bg-cream py-2 shadow-[var(--shadow-soft)]">
           {item.children.map((child) => (
             <Link
               key={child.href}
               href={child.href}
+              onClick={() => setOpen(false)}
               className="block px-4 py-2.5 text-sm text-navy/75 transition-colors duration-200 hover:bg-cream-dark/40 hover:text-navy"
             >
               {child.label}

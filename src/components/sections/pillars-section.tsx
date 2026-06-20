@@ -9,11 +9,11 @@ export function PillarsSection() {
   return (
     <Section className="overflow-hidden bg-cream-light">
       <FloatingPlanet className="absolute right-[6%] top-24 hidden opacity-60 lg:block" />
-      <Container className="relative max-w-3xl">
+      <Container className="relative max-w-5xl">
         <PlanetBadge label="Karma" />
         <h2 className="mt-5 text-display-xl font-display text-navy">Karma er…</h2>
 
-        <div className="mt-12 divide-y divide-navy/10">
+        <div className="mt-12 divide-y divide-navy/10 pl-1 sm:pl-2 lg:pl-4">
           {karmaPillarsWithHref.map((pillar) => (
             <PillarFeature
               key={pillar.slug}
