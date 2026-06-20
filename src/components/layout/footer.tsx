@@ -12,9 +12,9 @@ export function Footer() {
           <Image
             src={siteConfig.logoNegative}
             alt={siteConfig.name}
-            width={480}
-            height={270}
-            className="mx-auto h-24 w-auto lg:h-32"
+            width={720}
+            height={405}
+            className="mx-auto h-36 w-auto lg:h-48"
           />
         </Link>
 
