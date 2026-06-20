@@ -160,7 +160,7 @@ export function KarmaModal({ open, onClose }: KarmaModalProps) {
                       className="aspect-[16/10] h-auto w-full object-cover"
                     />
                   </div>
-                  <p className="mt-4 font-display text-xl leading-tight text-navy sm:text-2xl">
+                  <p className="mt-4 font-display text-xl leading-snug tracking-[0.05em] text-navy sm:text-2xl">
                     {story.heading}
                   </p>
                   <p className="mt-3 text-base leading-[1.8] text-navy/75 sm:text-lg">
