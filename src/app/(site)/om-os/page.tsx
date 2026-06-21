@@ -3,7 +3,6 @@ import Image from "next/image";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
-import { PageHero } from "@/components/hero/page-hero";
 import { ContentBlock } from "@/components/sections/content-block";
 import { PhotoPlaceholder } from "@/components/sections/photo-placeholder";
 import { siteConfig } from "@/lib/constants/site";
@@ -36,10 +35,18 @@ const values = [
 export default function OmOsPage() {
   return (
     <>
-      <PageHero eyebrow="Om os" title="Vi er Karmanaut" />
+      <Section
+        animate={false}
+        spacing="compact"
+        className="overflow-hidden bg-cream pt-12 pb-16 lg:pt-16 lg:pb-20"
+      >
+        <Container>
+          <p className="eyebrow mb-6">Om os</p>
+          <h1 className="max-w-4xl text-display-xl font-display text-navy">
+            Vi er Karmanaut
+          </h1>
 
-      <Section className="overflow-hidden bg-cream">
-        <Container className="grid items-start gap-16 lg:grid-cols-2 lg:gap-20">
+          <div className="mt-12 grid items-start gap-16 lg:mt-14 lg:grid-cols-2 lg:gap-20">
           <div className="space-y-6 text-lg leading-[1.85] text-navy/70 lg:text-xl">
             <p>
               Karmanaut er stiftet af Mikael & Charlotte Espensen for at gøre gode
@@ -84,6 +91,7 @@ export default function OmOsPage() {
               &ldquo;LykkeCup&rdquo;
             </figcaption>
           </figure>
+          </div>
         </Container>
       </Section>
 
