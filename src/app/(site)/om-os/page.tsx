@@ -77,20 +77,37 @@ export default function OmOsPage() {
             </p>
           </div>
 
-          <figure className="mx-auto w-full max-w-md lg:mx-0 lg:ml-auto lg:max-w-lg">
-            <Image
-              src={siteConfig.photos.kayaFamily}
-              alt="Kaya, Mikael og Charlotte til LykkeCup"
-              width={640}
-              height={800}
-              className="h-auto w-full object-cover"
-              sizes="(max-width: 1024px) 90vw, 480px"
-            />
-            <figcaption className="mt-4 text-sm leading-relaxed text-navy/55">
-              Kaya, Mikael og Charlotte til LykkeLigas sæsonafslutning
-              &ldquo;LykkeCup&rdquo;
-            </figcaption>
-          </figure>
+          <div className="mx-auto w-full max-w-md space-y-10 lg:mx-0 lg:ml-auto lg:max-w-lg">
+            <figure>
+              <Image
+                src={siteConfig.photos.kayaFamily}
+                alt="Kaya, Mikael og Charlotte til LykkeCup"
+                width={640}
+                height={800}
+                className="h-auto w-full object-cover"
+                sizes="(max-width: 1024px) 90vw, 480px"
+              />
+              <figcaption className="mt-4 text-sm leading-relaxed text-navy/55">
+                Kaya, Mikael og Charlotte til LykkeLigas sæsonafslutning
+                &ldquo;LykkeCup&rdquo;
+              </figcaption>
+            </figure>
+
+            <figure>
+              <Image
+                src={siteConfig.photos.christiansborg}
+                alt="Politisk interessevaretagelse og fundraising for LykkeLiga"
+                width={1280}
+                height={721}
+                className="h-auto w-full object-cover"
+                sizes="(max-width: 1024px) 90vw, 480px"
+              />
+              <figcaption className="mt-4 text-sm leading-relaxed text-navy/55">
+                Arbejdet med LykkeLiga indebærer bl.a. også politisk
+                interessevaretagelse og fundraising
+              </figcaption>
+            </figure>
+          </div>
           </div>
         </Container>
       </Section>
