@@ -31,5 +31,6 @@ export const siteConfig = {
     karmanautMoon: "/foto/karmanaut_moon.png",
     karmanautKontakt: "/karmanaut_kontakt2.png",
     karmaVerden: "/karma_verden.png",
+    kayaFamily: "/foto/mogcmedkaya.jpg",
   },
 } as const;
