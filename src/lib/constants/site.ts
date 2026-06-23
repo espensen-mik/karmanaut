@@ -18,6 +18,12 @@ export const siteConfig = {
   logoHorizontal: "/Karmanaut_ID_horisontal.svg",
   logoNegative: "/karmanaut_logo_negativ.svg",
   logoNaut: "/Kun_naut.svg",
+  /** Forside hero astronaut — flip `useAnimatedNaut` to revert to the static SVG */
+  forsideHeroNaut: {
+    useAnimatedNaut: true,
+    static: "/Kun_naut.svg",
+    animated: "/animate/karmanaut_animer_done.webm",
+  },
   heart: "/hjerte.svg",
   icons: {
     raadgivning: "/ikoner/raadgivning.png",

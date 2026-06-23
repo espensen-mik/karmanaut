@@ -60,14 +60,31 @@ export function ForsideHero() {
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               className="relative z-10 lg:-mr-8 lg:translate-y-6"
             >
-              <Image
-                src={siteConfig.logoNaut}
-                alt="Karmanaut astronaut"
-                width={520}
-                height={520}
-                priority
-                className="h-auto w-full max-w-lg lg:max-w-xl xl:max-w-2xl"
-              />
+              {siteConfig.forsideHeroNaut.useAnimatedNaut ? (
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  aria-label="Karmanaut astronaut"
+                  className="h-auto w-full max-w-lg lg:max-w-xl xl:max-w-2xl"
+                >
+                  <source
+                    src={siteConfig.forsideHeroNaut.animated}
+                    type="video/webm"
+                  />
+                </video>
+              ) : (
+                <Image
+                  src={siteConfig.forsideHeroNaut.static}
+                  alt="Karmanaut astronaut"
+                  width={520}
+                  height={520}
+                  priority
+                  className="h-auto w-full max-w-lg lg:max-w-xl xl:max-w-2xl"
+                />
+              )}
             </motion.div>
             <StarCluster className="absolute -bottom-4 left-0 w-28 opacity-80 lg:-left-12" />
           </div>
