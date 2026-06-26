@@ -114,7 +114,7 @@ export function KarmaModal({ open, onClose }: KarmaModalProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.98 }}
             transition={{ duration: 0.35, ease: "easeOut" }}
-            className="relative z-10 w-full max-w-lg overflow-hidden rounded-[20px] bg-cream shadow-[0_24px_80px_rgb(26_50_63_/_18%)]"
+            className="relative z-10 w-full max-w-lg overflow-hidden rounded-[20px] bg-cream shadow-[0_24px_80px_rgb(26_50_63_/_18%)] sm:max-w-xl"
           >
             <div className="bg-coral px-6 py-5 text-cream">
               <div className="flex items-start justify-between gap-4">
@@ -142,7 +142,7 @@ export function KarmaModal({ open, onClose }: KarmaModalProps) {
               </div>
             </div>
 
-            <div className="max-h-[min(72vh,640px)] overflow-y-auto px-6 py-6">
+            <div className="max-h-[min(80vh,720px)] overflow-y-auto px-6 py-5 sm:py-6">
               {step === "story" ? (
                 <motion.div
                   key={story.id}
@@ -150,7 +150,7 @@ export function KarmaModal({ open, onClose }: KarmaModalProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="mx-auto max-w-[13rem] overflow-hidden rounded-[12px] sm:max-w-[15rem]">
+                  <div className="mx-auto max-w-[11rem] overflow-hidden rounded-[12px] sm:max-w-[13rem]">
                     <Image
                       src={siteConfig.photos.karmaVerden}
                       alt=""
@@ -163,10 +163,10 @@ export function KarmaModal({ open, onClose }: KarmaModalProps) {
                   <p className="mt-4 font-display text-xl leading-snug tracking-[0.05em] text-navy sm:text-2xl">
                     {story.heading}
                   </p>
-                  <p className="mt-3 text-base leading-[1.8] text-navy/75 sm:text-lg">
+                  <p className="mt-3 text-[15px] leading-[1.6] text-navy/75 sm:text-base sm:leading-[1.65]">
                     {story.body}
                   </p>
-                  <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                     <AccentButton
                       type="button"
                       className="w-full sm:flex-1"
