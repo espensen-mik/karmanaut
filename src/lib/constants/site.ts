@@ -7,6 +7,7 @@ export const siteConfig = {
   karmanauterneDescription:
     "Du tager 20 års erfaring som selvstændig i reklamebranchen og tilføjer erfaringer med at konceptudvikle, opbygge og drifte Danmarks Lykkeligste Håndboldliga. Karmanauterne Mikael & Charlotte Espensen er nogle af hovedkræfterne bag LykkeLiga og har på egen krop mærket, hvordan karma kommer tilbage.",
   company: "Karmanaut ApS",
+  cvr: "46588711",
   address: {
     street: "Herskindsgade 15",
     city: "9000 Aalborg",
@@ -18,7 +19,7 @@ export const siteConfig = {
   logoHorizontal: "/Karmanaut_ID_horisontal.svg",
   logoNegative: "/karmanaut_logo_negativ.svg",
   logoNaut: "/Kun_naut.svg",
-  /** Forside hero astronaut — flip `useAnimatedNaut` to revert to the static SVG */
+  /** Forside hero astronaut — flip `useAnimatedNaut` to disable animation on desktop; mobile always uses the static SVG */
   forsideHeroNaut: {
     useAnimatedNaut: true,
     static: "/Kun_naut.svg",

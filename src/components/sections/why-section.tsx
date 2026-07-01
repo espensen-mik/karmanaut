@@ -11,9 +11,9 @@ import { siteConfig } from "@/lib/constants/site";
 export function WhySection() {
   return (
     <Section className="overflow-hidden bg-cream">
-      <FloatingPlanet className="absolute -left-4 top-32 z-10 opacity-80" size={64} />
-      <StarCluster className="absolute right-[5%] bottom-24 w-32 opacity-70" />
-      <Container className="grid items-center gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
+      <FloatingPlanet className="absolute -left-4 top-32 z-10 hidden opacity-80 lg:block" size={64} />
+      <StarCluster className="absolute right-[5%] bottom-24 hidden w-32 opacity-70 lg:block" />
+      <Container className="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
         <figure className="lg:-ml-12">
           <Image
             src={siteConfig.photos.karmanautMoon}
@@ -29,7 +29,7 @@ export function WhySection() {
           <h2 className="text-display-lg font-display text-navy lg:text-display-xl">
             Karma uden bullshit
           </h2>
-          <p className="mt-8 text-lg leading-[1.8] text-navy/70">
+          <p className="mt-6 text-base leading-[1.7] text-navy/70 lg:mt-8 lg:text-lg lg:leading-[1.8]">
             Hos karmanaut taler vi menneskesprog og udvikler koncepter til
             mennesker. Her får du altså ingen stakeholder alignment, synergier
             og transformative processer. I stedet får du klar tale og hjælp, som

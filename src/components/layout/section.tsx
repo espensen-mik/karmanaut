@@ -20,9 +20,9 @@ export function Section({
   id,
 }: SectionProps) {
   const spacingClass = {
-    default: "py-28 lg:py-40",
-    compact: "py-20 lg:py-28",
-    hero: "py-32 lg:py-44",
+    default: "py-16 lg:py-40",
+    compact: "py-14 lg:py-28",
+    hero: "py-20 lg:py-44",
   }[spacing];
 
   if (!animate) {

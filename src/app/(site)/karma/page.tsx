@@ -27,15 +27,15 @@ export default function KarmaPage() {
         <Container className="max-w-3xl">
           <div className="divide-y divide-navy/10">
             {karmaPillarsWithHref.map((pillar) => (
-              <article key={pillar.slug} className="py-10 first:pt-0 last:pb-0">
-                <div className="grid grid-cols-[5rem_1fr] gap-x-5 sm:grid-cols-[6rem_1fr] sm:gap-x-8">
+              <article key={pillar.slug} className="py-8 first:pt-0 last:pb-0 lg:py-10">
+                <div className="grid grid-cols-[4.5rem_1fr] gap-x-4 sm:grid-cols-[6rem_1fr] sm:gap-x-8">
                   <Image
                     src={pillar.icon}
                     alt=""
                     width={96}
                     height={96}
                     aria-hidden="true"
-                    className="size-16 object-contain sm:size-20"
+                    className="size-14 object-contain sm:size-20"
                   />
                   <div className="min-w-0">
                     <h2 className="font-display text-display-lg text-navy">
@@ -46,7 +46,7 @@ export default function KarmaPage() {
                         {pillar.title}
                       </Link>
                     </h2>
-                    <p className="mt-4 text-lg leading-[1.8] text-navy/70">
+                    <p className="mt-3 text-base leading-[1.7] text-navy/70 lg:mt-4 lg:text-lg lg:leading-[1.8]">
                       {pillar.description}
                     </p>
                     <div className="mt-6">

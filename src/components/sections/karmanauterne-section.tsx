@@ -17,12 +17,12 @@ export function KarmanauterneSection() {
       <Container>
         <PlanetBadge label="Karmanauterne" />
 
-        <div className="mt-5 grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="mt-5 grid items-start gap-8 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="text-display-lg font-display text-navy lg:text-display-xl">
               Vi er karmanauterne
             </h2>
-            <p className="mt-8 text-lg leading-[1.85] text-navy/70 lg:text-xl">
+            <p className="mt-6 text-base leading-[1.75] text-navy/70 lg:mt-8 lg:text-xl lg:leading-[1.85]">
               {siteConfig.karmanauterneDescription}
             </p>
             <div className="mt-10">
@@ -33,7 +33,7 @@ export function KarmanauterneSection() {
           <figure className="mx-auto w-full max-w-xs lg:mx-0 lg:ml-auto lg:max-w-sm">
             <div className="relative">
               <HeartMarker
-                className="absolute -bottom-8 -right-8 z-10 lg:-bottom-10 lg:-right-10"
+                className="absolute -bottom-5 -right-5 z-10 size-[7.5rem] lg:-bottom-10 lg:-right-10 lg:size-[9.125rem]"
                 size={146}
               />
               <Image

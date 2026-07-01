@@ -18,7 +18,7 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-cream py-24 lg:py-36",
+        "relative overflow-hidden bg-cream py-16 lg:py-36",
         className,
       )}
     >
@@ -29,7 +29,7 @@ export function PageHero({
           {title}
         </h1>
         {description ? (
-          <p className="mt-8 max-w-2xl text-lg leading-[1.75] text-navy/70 lg:text-xl">
+          <p className="mt-6 max-w-2xl text-base leading-[1.7] text-navy/70 lg:mt-8 lg:text-xl lg:leading-[1.75]">
             {description}
           </p>
         ) : null}

@@ -14,7 +14,7 @@ export function Footer() {
             alt={siteConfig.name}
             width={720}
             height={405}
-            className="mx-auto h-36 w-auto lg:h-48"
+            className="mx-auto h-28 w-auto lg:h-48"
           />
         </Link>
 
@@ -38,6 +38,7 @@ export function Footer() {
           <span>
             {siteConfig.address.street}, {siteConfig.address.city}
           </span>
+          <span>CVR {siteConfig.cvr}</span>
         </address>
 
         <div className="mt-10 border-t border-cream/10 pt-5">

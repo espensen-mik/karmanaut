@@ -13,11 +13,11 @@ export function PillarsSection() {
         <PlanetBadge label="Karma" />
         <h2 className="mt-5 text-display-xl font-display text-navy">Karma er…</h2>
 
-        <div className="mt-12 divide-y divide-navy/10 pl-1 sm:pl-2 lg:pl-4">
+        <div className="mt-10 divide-y divide-navy/10 pl-1 sm:pl-2 lg:mt-12 lg:pl-4">
           {karmaPillarsWithHref.map((pillar) => (
             <PillarFeature
               key={pillar.slug}
-              className="py-10 first:pt-0 last:pb-0"
+              className="py-8 first:pt-0 last:pb-0 lg:py-10"
               {...pillar}
             />
           ))}

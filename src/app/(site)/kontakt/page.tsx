@@ -25,7 +25,7 @@ export default function KontaktPage() {
         spacing="compact"
         className="bg-cream pt-4 pb-16 lg:pt-6 lg:pb-20"
       >
-        <Container className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
+        <Container className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
           <ContactCard />
           <div className="lg:border-l lg:border-navy/10 lg:pl-16">
             <InquiryForm />

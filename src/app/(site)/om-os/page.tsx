@@ -46,8 +46,8 @@ export default function OmOsPage() {
             Vi er Karmanaut
           </h1>
 
-          <div className="mt-12 grid items-start gap-16 lg:mt-14 lg:grid-cols-2 lg:gap-20">
-          <div className="space-y-6 text-lg leading-[1.85] text-navy/70 lg:text-xl">
+          <div className="mt-10 grid items-start gap-10 lg:mt-14 lg:grid-cols-2 lg:gap-20">
+          <div className="space-y-5 text-base leading-[1.75] text-navy/70 lg:space-y-6 lg:text-xl lg:leading-[1.85]">
             <p>
               Karmanaut er stiftet af Mikael & Charlotte Espensen for at gøre gode
               projekter og virksomheder bedre. I næsten 20 år drev vi et af
@@ -77,7 +77,7 @@ export default function OmOsPage() {
             </p>
           </div>
 
-          <div className="mx-auto w-full max-w-md space-y-10 lg:mx-0 lg:ml-auto lg:max-w-lg">
+          <div className="mx-auto w-full max-w-md space-y-8 lg:mx-0 lg:ml-auto lg:max-w-lg lg:space-y-10">
             <figure>
               <Image
                 src={siteConfig.photos.kayaFamily}
@@ -127,17 +127,17 @@ export default function OmOsPage() {
             {values.map((value, index) => (
               <div
                 key={value.title}
-                className="grid gap-4 py-8 lg:grid-cols-[0.35fr_0.65fr] lg:gap-16 lg:py-10"
+                className="grid gap-3 py-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-16 lg:py-10"
               >
-                <div className="flex items-baseline gap-4">
-                  <span className="font-display text-3xl text-navy/15">
+                <div className="flex items-baseline gap-3 lg:gap-4">
+                  <span className="font-display text-2xl text-navy/15 lg:text-3xl">
                     0{index + 1}
                   </span>
-                  <h3 className="font-display text-3xl text-navy lg:text-4xl">
+                  <h3 className="font-display text-2xl text-navy lg:text-4xl">
                     {value.title}
                   </h3>
                 </div>
-                <p className="text-lg leading-[1.75] text-navy/70 lg:pt-1">
+                <p className="text-base leading-[1.7] text-navy/70 lg:pt-1 lg:text-lg lg:leading-[1.75]">
                   {value.description}
                 </p>
               </div>
