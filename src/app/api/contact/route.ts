@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-import { siteConfig } from "@/lib/constants/site";
-
 type ContactPayload = {
   name?: string;
   organization?: string;
@@ -19,13 +17,22 @@ function isValidEmail(email: string) {
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY?.trim();
   const fromEmail = process.env.RESEND_FROM_EMAIL?.trim();
-  const toEmail = (process.env.CONTACT_TO_EMAIL ?? siteConfig.email).trim();
+  const toEmail = process.env.CONTACT_TO_EMAIL?.trim();
 
-  if (!apiKey || !fromEmail) {
-    console.error("Missing RESEND_API_KEY or RESEND_FROM_EMAIL", {
+  if (!apiKey || !fromEmail || !toEmail) {
+    console.error("Missing Resend configuration", {
       hasApiKey: Boolean(apiKey),
       hasFromEmail: Boolean(fromEmail),
+      hasToEmail: Boolean(toEmail),
     });
+    return NextResponse.json(
+      { error: "E-mail er ikke konfigureret endnu." },
+      { status: 500 },
+    );
+  }
+
+  if (!isValidEmail(toEmail)) {
+    console.error("Invalid CONTACT_TO_EMAIL", { toEmail });
     return NextResponse.json(
       { error: "E-mail er ikke konfigureret endnu." },
       { status: 500 },

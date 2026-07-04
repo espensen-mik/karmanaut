@@ -29,6 +29,7 @@ export function InquiryForm() {
           email: formData.get("email"),
           message: formData.get("message"),
           website: formData.get("website"),
+          source: "kontakt",
         }),
       });
 
