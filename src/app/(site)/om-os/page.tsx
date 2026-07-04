@@ -3,8 +3,6 @@ import Image from "next/image";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
-import { ContentBlock } from "@/components/sections/content-block";
-import { PhotoPlaceholder } from "@/components/sections/photo-placeholder";
 import { siteConfig } from "@/lib/constants/site";
 
 export const metadata: Metadata = {
@@ -12,25 +10,6 @@ export const metadata: Metadata = {
   description:
     "Mød Mikael & Charlotte Espensen — Karmanaut er stiftet for at gøre gode projekter og virksomheder bedre.",
 };
-
-const values = [
-  {
-    title: "Menneskelighed",
-    description: "Vi møder mennesker med varme, respekt og ægte nysgerrighed.",
-  },
-  {
-    title: "Bevægelse",
-    description: "Vi skaber rammer, hvor handling og engagement kan vokse.",
-  },
-  {
-    title: "Leg",
-    description: "Optimisme og humor gør forandring lettere at være en del af.",
-  },
-  {
-    title: "Tillid",
-    description: "Vi bygger relationer, der holder — ikke one-off events.",
-  },
-];
 
 export default function OmOsPage() {
   return (
@@ -108,65 +87,6 @@ export default function OmOsPage() {
               </figcaption>
             </figure>
           </div>
-          </div>
-        </Container>
-      </Section>
-
-      <ContentBlock title="Mission" className="bg-cream-light">
-        <p>
-          Vi hjælper virksomheder og organisationer med at gøre gode ting med
-          gode mennesker — gennem Karma, foredrag, programmer og fællesskaber
-          der skaber reel bevægelse.
-        </p>
-      </ContentBlock>
-
-      <Section className="bg-cream">
-        <Container>
-          <h2 className="text-display-lg font-display text-navy">Værdier</h2>
-          <div className="mt-12 max-w-4xl divide-y divide-navy/10">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-                className="grid gap-3 py-6 lg:grid-cols-[0.35fr_0.65fr] lg:gap-16 lg:py-10"
-              >
-                <div className="flex items-baseline gap-3 lg:gap-4">
-                  <span className="font-display text-2xl text-navy/15 lg:text-3xl">
-                    0{index + 1}
-                  </span>
-                  <h3 className="font-display text-2xl text-navy lg:text-4xl">
-                    {value.title}
-                  </h3>
-                </div>
-                <p className="text-base leading-[1.7] text-navy/70 lg:pt-1 lg:text-lg lg:leading-[1.75]">
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <Section className="bg-cream-light">
-        <Container>
-          <h2 className="text-display-lg font-display text-navy">Team</h2>
-          <p className="mt-6 max-w-2xl text-lg leading-[1.75] text-navy/70">
-            Placeholder: Her kommer teammedlemmer, roller og portrætter.
-          </p>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            <PhotoPlaceholder
-              variant="portrait"
-              label="Future Photography — team"
-              className="lg:mt-12"
-            />
-            <PhotoPlaceholder
-              variant="portrait"
-              label="Future Photography — people"
-            />
-            <PhotoPlaceholder
-              variant="portrait"
-              label="Future Photography — collaboration"
-              className="lg:-mt-8"
-            />
           </div>
         </Container>
       </Section>
