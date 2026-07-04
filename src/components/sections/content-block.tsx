@@ -20,12 +20,14 @@ export function ContentBlock({
       <Container>
         <div className="max-w-3xl">
           {leading ? (
-            <div className="grid grid-cols-[5rem_1fr] gap-x-6 sm:grid-cols-[6rem_1fr]">
-              <h2 className="col-start-2 text-display-lg font-display text-navy">
+            <div className="grid grid-cols-1 lg:grid-cols-[6rem_1fr] lg:gap-x-6">
+              <h2 className="text-display-lg font-display text-navy lg:col-start-2">
                 {title}
               </h2>
-              <div className="col-start-1 row-start-2 self-start">{leading}</div>
-              <div className="col-start-2 row-start-2 mt-8 space-y-5 text-lg leading-[1.8] text-navy/70">
+              <div className="hidden self-start lg:col-start-1 lg:row-start-2 lg:block">
+                {leading}
+              </div>
+              <div className="mt-8 space-y-5 text-lg leading-[1.8] text-navy/70 lg:col-start-2 lg:row-start-2">
                 {children}
               </div>
             </div>

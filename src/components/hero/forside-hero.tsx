@@ -49,7 +49,7 @@ export function ForsideHero() {
             </div>
           </motion.div>
 
-          <div className="relative mx-auto w-full max-w-md lg:mx-0 lg:max-w-none lg:justify-self-end">
+          <div className="relative mx-auto hidden w-full max-w-md lg:mx-0 lg:block lg:max-w-none lg:justify-self-end">
             <OrbitDecoration
               animate
               className="absolute -right-8 top-1/2 hidden size-80 -translate-y-1/2 lg:block lg:-right-16 lg:size-[26rem]"

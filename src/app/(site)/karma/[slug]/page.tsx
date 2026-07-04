@@ -51,11 +51,7 @@ export default async function KarmaPillarPage({ params }: KarmaPillarPageProps) 
       />
 
       <ContentBlock
-        title={
-          "contentTitle" in pillar && pillar.contentTitle
-            ? pillar.contentTitle
-            : pillar.title
-        }
+        title={pillar.contentTitle}
         className="bg-cream-light"
         leading={
           <Image
@@ -68,11 +64,9 @@ export default async function KarmaPillarPage({ params }: KarmaPillarPageProps) 
           />
         }
       >
-        {"body" in pillar && pillar.body
-          ? pillar.body.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))
-          : <p>{pillar.description}</p>}
+        {pillar.body.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
         <PrimaryButton href="/kontakt" className="mt-3 w-fit">
           Kontakt os
         </PrimaryButton>

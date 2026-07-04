@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-navy text-cream">
       <Container className="py-12 text-center lg:py-14">
-        <Link href="/forside" className="inline-block">
+        <Link href="/" className="inline-block">
           <Image
             src={siteConfig.logoNegative}
             alt={siteConfig.name}

@@ -19,7 +19,7 @@ export const karmaNavItems: readonly NavChildItem[] = karmaPillars.map(
 );
 
 export const navItems: readonly NavItem[] = [
-  { label: "Forside", href: "/forside" },
+  { label: "Forside", href: "/" },
   { label: "Karma er...", href: "/karma", children: karmaNavItems },
   { label: "Om os", href: "/om-os" },
   { label: "Kontakt", href: "/kontakt" },

@@ -105,7 +105,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-cream/85 backdrop-blur-lg">
       <Container>
         <div className="flex h-20 items-center justify-between gap-6 lg:h-24">
-          <Link href="/forside" className="shrink-0">
+          <Link href="/" className="shrink-0">
             <Image
               src={siteConfig.logoHorizontal}
               alt={siteConfig.name}

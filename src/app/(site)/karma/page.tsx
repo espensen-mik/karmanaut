@@ -28,14 +28,14 @@ export default function KarmaPage() {
           <div className="divide-y divide-navy/10">
             {karmaPillarsWithHref.map((pillar) => (
               <article key={pillar.slug} className="py-8 first:pt-0 last:pb-0 lg:py-10">
-                <div className="grid grid-cols-[4.5rem_1fr] gap-x-4 sm:grid-cols-[6rem_1fr] sm:gap-x-8">
+                <div className="lg:grid lg:grid-cols-[6rem_1fr] lg:gap-x-8">
                   <Image
                     src={pillar.icon}
                     alt=""
                     width={96}
                     height={96}
                     aria-hidden="true"
-                    className="size-14 object-contain sm:size-20"
+                    className="hidden size-20 object-contain lg:block"
                   />
                   <div className="min-w-0">
                     <h2 className="font-display text-display-lg text-navy">

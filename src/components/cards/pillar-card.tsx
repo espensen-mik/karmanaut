@@ -20,14 +20,14 @@ export function PillarFeature({
 }: PillarFeatureProps) {
   return (
     <article className={className}>
-      <div className="grid grid-cols-[auto_1fr] gap-x-3 sm:gap-x-6 lg:gap-x-10">
+      <div className="lg:grid lg:grid-cols-[auto_1fr] lg:gap-x-10">
         <Image
           src={icon}
           alt=""
           width={216}
           height={216}
           aria-hidden="true"
-          className="size-[7.5rem] -ml-1 object-contain sm:-ml-3 sm:size-48 lg:-ml-6 lg:size-[13.5rem]"
+          className="hidden -ml-6 size-[13.5rem] object-contain lg:block"
         />
         <div className="min-w-0 pt-1">
           <h3 className="font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-none text-navy">
