@@ -50,19 +50,30 @@ export default async function KarmaPillarPage({ params }: KarmaPillarPageProps) 
         description={pillar.description}
       />
 
-      <ContentBlock title={pillar.title} className="bg-cream-light">
-        <div className="flex items-start gap-6">
+      <ContentBlock
+        title={
+          "contentTitle" in pillar && pillar.contentTitle
+            ? pillar.contentTitle
+            : pillar.title
+        }
+        className="bg-cream-light"
+        leading={
           <Image
             src={pillar.icon}
             alt=""
             width={96}
             height={96}
             aria-hidden="true"
-            className="size-20 shrink-0 object-contain sm:size-24"
+            className="size-20 object-contain sm:size-24"
           />
-          <p>{pillar.description}</p>
-        </div>
-        <PrimaryButton href="/kontakt" className="mt-8">
+        }
+      >
+        {"body" in pillar && pillar.body
+          ? pillar.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))
+          : <p>{pillar.description}</p>}
+        <PrimaryButton href="/kontakt" className="mt-3 w-fit">
           Kontakt os
         </PrimaryButton>
       </ContentBlock>

@@ -90,14 +90,14 @@ export function InquiryForm() {
             htmlFor="organization"
             className="text-sm font-medium text-navy/80"
           >
-            Jeg kommer fra (firma, organisation…)
+            Jeg kommer fra
           </label>
           <input
             id="organization"
             name="organization"
             type="text"
             disabled={status === "loading"}
-            placeholder="Fx LykkeLiga, Aalborg Kommune…"
+            placeholder="Firma eller organisation"
             className="h-12 w-full border-b border-navy/15 bg-transparent px-1 text-navy outline-none transition-all duration-200 placeholder:text-navy/30 focus:border-coral disabled:opacity-60"
           />
         </div>
