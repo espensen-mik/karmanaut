@@ -23,6 +23,9 @@ export const siteConfig = {
   forsideHeroNaut: {
     useAnimatedNaut: true,
     static: "/Kun_naut.svg",
+    /** HEVC with alpha — Safari / iPad / iPhone (WebM alpha is not supported there) */
+    animatedSafari: "/animate/karmanaut_animer_done.mp4",
+    /** VP9 WebM with alpha — Chrome / Firefox / Edge */
     animated: "/animate/karmanaut_animer_done.webm",
   },
   heart: "/hjerte.svg",

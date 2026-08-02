@@ -77,8 +77,12 @@ export function ForsideHero() {
                     playsInline
                     preload="auto"
                     aria-label="Karmanaut astronaut"
-                    className="hidden h-auto w-full max-w-lg lg:block lg:max-w-xl xl:max-w-2xl"
+                    className="hidden h-auto w-full max-w-lg bg-transparent lg:block lg:max-w-xl xl:max-w-2xl"
                   >
+                    <source
+                      src={siteConfig.forsideHeroNaut.animatedSafari}
+                      type='video/mp4; codecs="hvc1"'
+                    />
                     <source
                       src={siteConfig.forsideHeroNaut.animated}
                       type="video/webm"
