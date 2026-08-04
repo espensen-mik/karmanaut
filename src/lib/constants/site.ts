@@ -43,5 +43,6 @@ export const siteConfig = {
     karmaVerden: "/karma_verden.png",
     kayaFamily: "/foto/mogcmedkaya.jpg",
     christiansborg: "/foto/christiansborg.jpeg",
+    kasperBrix: "/foto/kasper_brix.jpg",
   },
 } as const;
