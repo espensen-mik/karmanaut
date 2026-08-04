@@ -21,18 +21,18 @@ export function TestimonialSection() {
             />
           </figure>
 
-          <blockquote className="relative min-w-0">
-            <PlanetBadge className="mb-10 lg:mb-12" label="KarmaHistorie" />
+          <blockquote className="min-w-0">
+            <PlanetBadge label="KarmaHistorie" />
 
-            <div className="relative pt-2 lg:pt-4">
+            <div className="relative mt-10 lg:mt-12">
               <span
                 aria-hidden="true"
-                className="pointer-events-none absolute -left-1 top-0 font-display text-[7rem] leading-none text-coral/35 select-none lg:-left-3 lg:text-[9rem]"
+                className="pointer-events-none absolute left-0 top-0 font-display text-[6.5rem] leading-none text-coral/30 select-none lg:text-[8rem]"
               >
                 “
               </span>
 
-              <div className="relative space-y-5 text-base leading-[1.75] text-navy/80 lg:text-lg lg:leading-[1.85]">
+              <div className="relative space-y-5 pt-10 text-base leading-[1.75] text-navy/80 lg:pt-12 lg:text-lg lg:leading-[1.85]">
                 <p>
                   Da vi hos North Shore Surf skulle byde på forpagtningen af{" "}
                   <em className="italic text-navy">De Maritime Huse</em> og
