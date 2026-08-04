@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/constants/site";
 
 export function TestimonialSection() {
   return (
-    <Section className="overflow-hidden bg-cream-dark">
+    <Section className="overflow-hidden bg-cream-dark pt-20 lg:pt-48">
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,14rem)_1fr] lg:gap-16 xl:grid-cols-[minmax(0,16rem)_1fr]">
           <figure className="mx-auto w-40 sm:w-48 lg:mx-0 lg:w-full">
@@ -22,12 +22,12 @@ export function TestimonialSection() {
           </figure>
 
           <blockquote className="relative min-w-0">
-            <PlanetBadge className="mb-6" label="KarmaHistorie" />
+            <PlanetBadge className="mb-10 lg:mb-12" label="KarmaHistorie" />
 
-            <div className="relative">
+            <div className="relative pt-2 lg:pt-4">
               <span
                 aria-hidden="true"
-                className="pointer-events-none absolute -left-1 -top-8 font-display text-[7rem] leading-none text-coral/35 select-none lg:-left-3 lg:-top-10 lg:text-[9rem]"
+                className="pointer-events-none absolute -left-1 top-0 font-display text-[7rem] leading-none text-coral/35 select-none lg:-left-3 lg:text-[9rem]"
               >
                 “
               </span>
