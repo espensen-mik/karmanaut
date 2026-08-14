@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Karmanaut",
   url: "https://karmanaut.dk",
   description:
-    "Karmanaut hjælper virksomheder og organisationer med at gøre gode ting med gode mennesker.",
+    "Karmanaut hjælper virksomheder og organisationer med at gøre gode ting med gode mennesker. Vi skaber karma gennem rådgivning, workshops og kreative koncepter.",
   heroDescription:
     "Karmanaut hjælper virksomheder og organisationer med at gøre gode ting med gode mennesker. Gennem rådgivning, workshops, foredrag, projekt udvikling og kreative koncepter skaber vi karma fra det karmanautiske kontor i Aalborg.",
   karmanauterneDescription:

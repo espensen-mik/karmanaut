@@ -5,10 +5,13 @@ import { KarmanauterneSection } from "@/components/sections/karmanauterne-sectio
 import { PillarsSection } from "@/components/sections/pillars-section";
 import { TestimonialSection } from "@/components/sections/testimonial-section";
 import { WhySection } from "@/components/sections/why-section";
+import { siteConfig } from "@/lib/constants/site";
 
 export const metadata: Metadata = {
-  description:
-    "Vi kommer med karma. Karmanaut hjælper virksomheder og organisationer med at gøre gode ting med gode mennesker.",
+  description: siteConfig.description,
+  openGraph: {
+    description: siteConfig.description,
+  },
 };
 
 export default function HomePage() {
