@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/thumb_karmanaut.jpg",
+        url: "/og-karmanaut.jpg",
         width: 1920,
-        height: 1080,
-        alt: "Karmanaut",
+        height: 1005,
+        alt: "Karmanaut — Vi kommer med karma",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Karmanaut — Vi kommer med karma",
     description: siteConfig.description,
-    images: ["/thumb_karmanaut.jpg"],
+    images: ["/og-karmanaut.jpg"],
   },
   icons: {
     icon: [
