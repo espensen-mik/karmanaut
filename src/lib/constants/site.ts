@@ -8,6 +8,8 @@ export const siteConfig = {
   karmanauterneDescription:
     "Du tager 20 års erfaring som selvstændig i reklamebranchen og tilføjer erfaringer med at konceptudvikle, opbygge og drifte Danmarks Lykkeligste Håndboldliga. Karmanauterne Mikael & Charlotte Espensen er nogle af hovedkræfterne bag LykkeLiga og har på egen krop mærket, hvordan karma kommer tilbage.",
   company: "Karmanaut ApS",
+  authors: ["Mikael Espensen", "Charlotte Espensen"],
+  publishedAt: "2026-06-18T00:00:00+02:00",
   cvr: "46588711",
   address: {
     street: "Herskindsgade 15",
