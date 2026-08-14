@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Karmanaut",
-  url: "https://karmanaut.dk",
+  url: "https://www.karmanaut.dk",
   description:
     "Karmanaut hjælper virksomheder og organisationer med at gøre gode ting med gode mennesker. Vi skaber karma gennem rådgivning, workshops og kreative koncepter.",
   heroDescription:

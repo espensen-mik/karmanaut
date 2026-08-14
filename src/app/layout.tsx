@@ -19,7 +19,7 @@ const bebasNeue = Bebas_Neue({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Karmanaut",
+    default: "Karmanaut — Vi kommer med karma",
     template: "%s | Karmanaut",
   },
   description: siteConfig.description,
@@ -35,9 +35,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: "/og-karmanaut.jpg",
+        url: "/thumb_karmanaut.jpg",
+        secureUrl: `${siteConfig.url}/thumb_karmanaut.jpg`,
         width: 1920,
-        height: 1005,
+        height: 1080,
+        type: "image/jpeg",
         alt: "Karmanaut — Vi kommer med karma",
       },
     ],
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Karmanaut — Vi kommer med karma",
     description: siteConfig.description,
-    images: ["/og-karmanaut.jpg"],
+    images: [`${siteConfig.url}/thumb_karmanaut.jpg`],
   },
   icons: {
     icon: [

@@ -9,9 +9,6 @@ import { siteConfig } from "@/lib/constants/site";
 
 export const metadata: Metadata = {
   description: siteConfig.description,
-  openGraph: {
-    description: siteConfig.description,
-  },
 };
 
 export default function HomePage() {
