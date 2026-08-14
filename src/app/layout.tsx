@@ -33,11 +33,20 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: "Karmanaut — Vi kommer med karma",
     description: siteConfig.description,
+    images: [
+      {
+        url: "/thumb_karmanaut.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "Karmanaut",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Karmanaut — Vi kommer med karma",
     description: siteConfig.description,
+    images: ["/thumb_karmanaut.jpg"],
   },
   icons: {
     icon: [
