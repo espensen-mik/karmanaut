@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 
+import { siteConfig } from "@/lib/constants/site";
 import "@/styles/globals.css";
 
 const inter = Inter({
@@ -16,12 +17,28 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: "Karmanaut",
     template: "%s | Karmanaut",
   },
-  description:
-    "Karmanaut hjælper virksomheder og organisationer med at gøre gode ting med gode mennesker.",
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "da_DK",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: "Karmanaut — Vi kommer med karma",
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Karmanaut — Vi kommer med karma",
+    description: siteConfig.description,
+  },
   icons: {
     icon: [
       { url: "/hjerte_fav_512.svg", type: "image/svg+xml" },

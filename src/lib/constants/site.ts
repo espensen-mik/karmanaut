@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "Karmanaut",
+  url: "https://karmanaut.dk",
   description:
     "Karmanaut hjælper virksomheder og organisationer med at gøre gode ting med gode mennesker.",
   heroDescription:
