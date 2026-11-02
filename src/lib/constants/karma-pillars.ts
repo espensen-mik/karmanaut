@@ -6,7 +6,7 @@ export const karmaPillars = [
     title: "Rådgivning",
     icon: siteConfig.icons.raadgivning,
     description:
-      "Karmanauterne har gennem mange år i reklamebranchen arbejdet sammen med et utal af kommuner, offentlige organisationer, interesse organisationer og private virksomheder. Vi rådgiver bl.a. om karma, rekruttering, kommunikation, fællesskab og trivsel ud fra karmanautiske principper.",
+      "Karmanauterne har gennem mange år i reklamebranchen arbejdet sammen med et utal af kommuner, offentlige organisationer, interesseorganisationer og private virksomheder. Vi rådgiver bl.a. om kommunikation, kreativ konceptudvikling, fællesskab og trivsel ud fra karmanautiske principper.",
     contentTitle: "Karma-tjek",
     body: [
       "Alle virksomheder og organisationer skaber karma. Spørgsmålet er bare hvilken. Hver eneste beslutning, kampagne, medarbejderoplevelse og kundekontakt efterlader et aftryk. Dette aftryk former jeres omdømme, kultur og fremtid. Derfor hjælper vi med at skabe god karma gennem stærk kommunikation, kreative koncepter og positive arbejdsfællesskaber.",
