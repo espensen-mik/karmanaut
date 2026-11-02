@@ -58,30 +58,6 @@ export const metadata: Metadata = {
     "article:published_time": siteConfig.publishedAt,
     "article:modified_time": siteConfig.publishedAt,
   },
-  openGraph: {
-    type: "website",
-    locale: "da_DK",
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    title: "Karmanaut — Vi kommer med karma",
-    description: siteConfig.description,
-    images: [
-      {
-        url: "/thumb_karmanaut.jpg",
-        secureUrl: `${siteConfig.url}/thumb_karmanaut.jpg`,
-        width: 1920,
-        height: 1080,
-        type: "image/jpeg",
-        alt: "Karmanaut — Vi kommer med karma",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Karmanaut — Vi kommer med karma",
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/thumb_karmanaut.jpg`],
-  },
   icons: {
     icon: [
       { url: "/hjerte_fav_512.svg", type: "image/svg+xml" },

@@ -19,7 +19,12 @@ const KarmaModalContext = createContext<KarmaModalContextValue | null>(null);
 export function KarmaModalProvider({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
 
-  const openModal = useCallback(() => setOpen(true), []);
+  const [modalSession, setModalSession] = useState(0);
+
+  const openModal = useCallback(() => {
+    setModalSession((session) => session + 1);
+    setOpen(true);
+  }, []);
   const closeModal = useCallback(() => setOpen(false), []);
 
   const value = useMemo(() => ({ openModal }), [openModal]);
@@ -27,7 +32,7 @@ export function KarmaModalProvider({ children }: { children: React.ReactNode }) 
   return (
     <KarmaModalContext.Provider value={value}>
       {children}
-      <KarmaModal open={open} onClose={closeModal} />
+      <KarmaModal key={modalSession} open={open} onClose={closeModal} />
     </KarmaModalContext.Provider>
   );
 }

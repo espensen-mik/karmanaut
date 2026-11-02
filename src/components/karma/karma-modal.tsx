@@ -30,10 +30,6 @@ export function KarmaModal({ open, onClose }: KarmaModalProps) {
   useEffect(() => {
     if (!open) return;
 
-    setStep("story");
-    setStory(karmaStories[0]);
-    setFormStatus("idle");
-    setFormError("");
     document.body.style.overflow = "hidden";
 
     function handleKeyDown(event: KeyboardEvent) {
